@@ -31,4 +31,14 @@ public class Locators {
     public static final String region_list_test_id = "regions-list";
     public static final String region_list_item_test_id = "regions-item";
 
+
+    //Profile
+    public static final String product_name_id = "posting-title";
+    public static final String suggested_categories_id = "categories-list";
+    public static final String category_button_id = "posting-select-category";
+    public static final String description_id = "posting-description-text-area";
+    public static final String price_input_id = "price-input";
+    public static final String locations_list_id = "location-list";
+    public static final String submitAll_btn_id = "purchase-pay-button";
+    public static final String delete_add_btn_label = "Деактивировать";
 }

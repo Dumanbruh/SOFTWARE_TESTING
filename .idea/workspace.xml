@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/Home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" afterDir="false" />
+    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="home page merge and new test cases">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Locators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +46,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.CatalogTest.FilterTest">
-    <configuration name="CatalogTest.FavouritesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ProfileTest.DeleteAdvertisement">
+    <configuration name="ProfileTest.CreateAdvertisement" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
@@ -55,8 +56,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
-      <option name="METHOD_NAME" value="FavouritesTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
+      <option name="METHOD_NAME" value="CreateAdvertisement" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -64,7 +65,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CatalogTest.FilterTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.DeleteAdvertisement" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
@@ -73,8 +74,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
-      <option name="METHOD_NAME" value="FilterTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
+      <option name="METHOD_NAME" value="DeleteAdvertisement" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -82,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CatalogTest.navigate" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.DeleteFavouritesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
@@ -91,8 +92,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
-      <option name="METHOD_NAME" value="navigate" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
+      <option name="METHOD_NAME" value="DeleteFavouritesTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -100,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeTest.GooglePlayButtonTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.createCV" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +110,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTest" />
-      <option name="METHOD_NAME" value="GooglePlayButtonTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
+      <option name="METHOD_NAME" value="createCV" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -118,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeTest.RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.hover" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +128,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTest" />
-      <option name="METHOD_NAME" value="RegistrationTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
+      <option name="METHOD_NAME" value="hover" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -138,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CatalogTest.FilterTest" />
-        <item itemvalue="TestNG.CatalogTest.FavouritesTest" />
-        <item itemvalue="TestNG.CatalogTest.navigate" />
-        <item itemvalue="TestNG.HomeTest.RegistrationTest" />
-        <item itemvalue="TestNG.HomeTest.GooglePlayButtonTest" />
+        <item itemvalue="TestNG.ProfileTest.DeleteAdvertisement" />
+        <item itemvalue="TestNG.ProfileTest.CreateAdvertisement" />
+        <item itemvalue="TestNG.ProfileTest.createCV" />
+        <item itemvalue="TestNG.ProfileTest.hover" />
+        <item itemvalue="TestNG.ProfileTest.DeleteFavouritesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663747862424</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="home page merge and new test cases">
+      <created>1663903728468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663903728469</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +186,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="home page merge and new test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="home page merge and new test cases" />
   </component>
 </project>

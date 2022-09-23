@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.Catalog;
 import pages.Home;
+import pages.Profile;
 
 import java.time.Duration;
 
@@ -17,6 +18,7 @@ public class CatalogTest {
     WebDriverWait wait;
     Catalog catalog;
     Home home;
+    Profile profile;
     private final String url = "https://www.olx.kz";
 
     @BeforeTest
@@ -27,6 +29,7 @@ public class CatalogTest {
         driver.manage().window().maximize();
         catalog = new Catalog(driver, wait);
         home = new Home(driver, wait);
+        profile = new Profile(driver, wait);
         driver.get(url);
     }
 
@@ -49,7 +52,7 @@ public class CatalogTest {
 
     @Test
     public void FavouritesTest(){
-        home.writeLogin();
+        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
         home.navigate();
         catalog.navigate();
         catalog.addToFav();

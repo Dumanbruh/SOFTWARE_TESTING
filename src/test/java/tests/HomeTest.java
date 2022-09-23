@@ -47,6 +47,6 @@ public class HomeTest {
 
     @Test
     public void RegistrationTest(){
-        homePage.writeLogin();
+        homePage.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
     }
 }

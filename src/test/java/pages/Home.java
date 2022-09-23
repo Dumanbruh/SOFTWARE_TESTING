@@ -63,12 +63,13 @@ public class Home {
 
     }
 
-    public void writeLogin(){
+    public void writeLogin(String login, String pwd){
         driver.findElement(cookiesButtonBy).click();
         driver.findElement(yourProfileButtonBy).click();
-        driver.findElement(loginInputBy).sendKeys("dmarlambekov@gmail.com");
-        driver.findElement(passInputBy).sendKeys("qABVXr@D-*zn78K");
+        driver.findElement(loginInputBy).sendKeys(login);
+        driver.findElement(passInputBy).sendKeys(pwd);
         driver.findElement(loginButtonBy).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[text()='Ваши объявления']")));
     }
 
 }
