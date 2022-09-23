@@ -8,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.Catalog;
+import pages.Home;
 
 import java.time.Duration;
 
@@ -15,24 +16,43 @@ public class CatalogTest {
     WebDriver driver;
     WebDriverWait wait;
     Catalog catalog;
-    private final String url = "https://www.olx.kz/d/elektronika/";
+    Home home;
+    private final String url = "https://www.olx.kz";
 
     @BeforeTest
     public void InitDriver(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
         catalog = new Catalog(driver, wait);
+        home = new Home(driver, wait);
+        driver.get(url);
     }
 
     @Test
     public void SearchTest(){
-        driver.get(url);
-
+        catalog.closeCookies();
         catalog.enterSearch("Видеокарта");
         catalog.writeRegion("Нур-Султан");
-//        catalog.clickSearch();
+        catalog.clickSearch();
+    }
+
+    @Test
+    public void FilterTest(){
+        home.closeCookie();
+        catalog.navigate();
+        catalog.selectCategory();
+        catalog.inputMinSum(100);
+        catalog.inputMaxSum(5000);
+    }
+
+    @Test
+    public void FavouritesTest(){
+        home.writeLogin();
+        home.navigate();
+        catalog.navigate();
+        catalog.addToFav();
     }
 
 
