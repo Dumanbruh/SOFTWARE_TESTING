@@ -1,41 +1,15 @@
 package tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import common.BaseTest;
 import org.testng.annotations.Test;
-import pages.Catalog;
-import pages.Home;
-import pages.Profile;
 
-import java.time.Duration;
-
-public class CatalogTest {
-    WebDriver driver;
-    WebDriverWait wait;
-    Catalog catalog;
-    Home home;
-    Profile profile;
-    private final String url = "https://www.olx.kz";
-
-    @BeforeTest
-    public void InitDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        catalog = new Catalog(driver, wait);
-        home = new Home(driver, wait);
-        profile = new Profile(driver, wait);
-        driver.get(url);
-    }
+public class CatalogTest extends BaseTest {
 
     @Test
     public void SearchTest(){
-        catalog.closeCookies();
+        extentTest = extentReports.createTest("Search test");
+        home.closeCookie();
+        catalog.navigate();
         catalog.enterSearch("Видеокарта");
         catalog.writeRegion("Нур-Султан");
         catalog.clickSearch();
@@ -43,6 +17,7 @@ public class CatalogTest {
 
     @Test
     public void FilterTest(){
+        extentTest = extentReports.createTest("Filtering test");
         home.closeCookie();
         catalog.navigate();
         catalog.selectCategory();
@@ -52,17 +27,13 @@ public class CatalogTest {
 
     @Test
     public void FavouritesTest(){
-        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
+        extentTest = extentReports.createTest("Add to favourites test test");
+        home.writeLogin();
         home.navigate();
         catalog.navigate();
         catalog.addToFav();
     }
 
 
-
-//    @AfterTest
-//    public void TearDown(){
-//        driver.quit();
-//    }
 
 }

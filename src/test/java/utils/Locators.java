@@ -24,21 +24,27 @@ public class Locators {
     public static final String clear_btn_id = "filter-clear-all";
     public static final String advertisement_grid_id = "listing-grid";
     public static final String add_to_fav_btn_id = "adAddToFavorites";
-    public static final String add_to_fav_snackbar_id = "dialog";
-
-
-    public static final String listing_wrapper_class = "css-1amhcb2";
-    public static final String region_list_test_id = "regions-list";
-    public static final String region_list_item_test_id = "regions-item";
 
 
     //Profile
     public static final String product_name_id = "posting-title";
-    public static final String suggested_categories_id = "categories-list";
+    public static final String custom_categories_id = "categories-list";
+    public static final String suggested_categories_id = "suggested-categories-list";
     public static final String category_button_id = "posting-select-category";
     public static final String description_id = "posting-description-text-area";
     public static final String price_input_id = "price-input";
     public static final String locations_list_id = "location-list";
     public static final String submitAll_btn_id = "purchase-pay-button";
     public static final String delete_add_btn_label = "Деактивировать";
+
+    //Account Management
+    public static final String logout_button = "Выйти";
+    public static final String forgot_password = "login-form__lostpassword";
+    public static final String forgot_username = "username";
+    public static final String new_password = "password";
+    public static final String change_password = "se_userSignIn";
+    public static final String facebook = "login-button--facebook";
+    public static final String facebook_username = "email";
+    public static final String facebook_password = "pass";
+    public static final String facebook_submit = "loginbutton";
 }

@@ -18,6 +18,8 @@ public class Profile {
 
     Random random = new Random();
 
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
     @FindBy(className = "removeObservedAd")
     List<WebElement> removeAdBtn;
 
@@ -36,8 +38,11 @@ public class Profile {
     @FindBy(xpath = "//div[@data-cy='" + Locators.category_button_id +"']")
     WebElement openCategoryBtn;
 
-    @FindBy(xpath = "//ul[@data-testid='" + Locators.suggested_categories_id + "']")
-    List<WebElement> suggestedCategoriesList;
+    @FindBy(xpath = "//ul[@data-testid='" + Locators.custom_categories_id + "']")
+    List<WebElement> customCategories;
+
+    @FindBy(xpath = "//div[@data-cy='" + Locators.suggested_categories_id + "']")
+    WebElement suggestedCategories;
 
     @FindBy(xpath = "//textarea[@data-testid='" + Locators.description_id + "']")
     WebElement descriptionInput;
@@ -127,33 +132,27 @@ public class Profile {
         openCategoryBtn.click();
     }
 
-    public void chooseSuggestedCategory(){
-        wait.until(ExpectedConditions.visibilityOfAllElements(suggestedCategoriesList));
-        List<WebElement> btnList = suggestedCategoriesList.get(0).findElements(By.tagName("button"));
-        btnList.get(2).click();
-        suggestedCategoriesList.get(1).findElements(By.tagName("li")).get(7).click();
-        suggestedCategoriesList.get(2).findElements(By.tagName("li")).get(1).click();
 
+    public void chooseSuggestedCategory(){
+        wait.until(ExpectedConditions.visibilityOf(suggestedCategories));
+        suggestedCategories.findElements(By.xpath("//div[@data-cy='posting-suggested-categories-item']")).get(0).click();
+    }
+
+    public void chooseNotSuggestedCategory(){
+        wait.until(ExpectedConditions.visibilityOfAllElements(customCategories));
+        List<WebElement> btnList = customCategories.get(0).findElements(By.tagName("button"));
+        btnList.get(7).click();
+        customCategories.get(1).findElements(By.tagName("li")).get(1).click();
+        customCategories.get(2).findElements(By.tagName("li")).get(1).click();
 //        for(int i = 0; i < suggestedCategoriesList.size(); i++){
 //            List<WebElement> subCategories = suggestedCategoriesList.get(i).findElements(By.tagName("li"));
 //            subCategories.get(random.nextInt(subCategories.size())).click();
 //        }
-//        List<WebElement> subCategories = suggestedCategoriesList.get(1).findElements(By.tagName("li"));
-//        subCategories.get(random.nextInt(subCategories.size())).click();
-//        if(suggestedCategoriesList.get(2).findElements(By.tagName("li")).size() > 0){
-//            List<WebElement> subSubCategories = suggestedCategoriesList.get(2).findElements(By.tagName("li"));
-//            subSubCategories.get(random.nextInt(subSubCategories.size())).click();
-//        }
-//        if(suggestedCategoriesList.get(3).findElements(By.tagName("li")).size() > 0){
-//            List<WebElement> subsubSubCategories = suggestedCategoriesList.get(3).findElements(By.tagName("li"));
-//            subsubSubCategories.get(random.nextInt(subsubSubCategories.size())).click();
-//        }
-
     }
 
     public void enterDescription(String productDescription){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
+        wait.until(ExpectedConditions.elementToBeClickable(descriptionInput));
         descriptionInput.click();
         descriptionInput.sendKeys(productDescription);
     }
@@ -168,7 +167,6 @@ public class Profile {
     }
 
     public void chooseState(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
         List<WebElement> buttons = requiredFields.get(1).findElements(By.tagName("button"));
         buttons.get(random.nextInt(buttons.size())).click();
@@ -176,8 +174,6 @@ public class Profile {
 
     public void enterLocation(String location){
         locationField.sendKeys(location);
-//        wait.until(ExpectedConditions.visibilityOfAllElements(locationsWrapper));
-//        locationsWrapper.findElements(By.tagName("li")).get(2).submit();
     }
 
     public void hover(){
@@ -186,18 +182,30 @@ public class Profile {
         Actions actions = new Actions(driver);
         actions.moveToElement(mainMenu).perform();
 
-        WebElement subMenu = driver.findElement(By.xpath("//a[contains(text(),'Профиль кандидата')]"));
+        WebElement subMenu = driver.findElement(By.xpath("//a[contains(text(),'Выйти')]"));
         actions.moveToElement(subMenu);
         actions.click().build().perform();
     }
 
     public void createCv(){
+        WebElement mainMenu = driver.findElement(By.linkText("Ваш профиль"));
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(mainMenu).perform();
+
+
+        WebElement subMenu = driver.findElement(By.xpath("//a[contains(text(),'Профиль кандидата')]"));
+        actions.moveToElement(subMenu);
+        actions.click().build().perform();
+
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[text()='Профиль кандидата']")));
         WebElement cv = driver.findElement(By.xpath("//a[contains(text(),'Создайте ваш профиль кандидата')]"));
         cv.click();
-        WebElement addinf = driver.findElement(By.className("css-1ipeylj-BaseStyles"));
+        WebElement addinf = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[2]/article[1]/section[1]/button[1]"));
         addinf.click();
         WebElement name = driver.findElement(By.name("firstName"));
-        WebElement sname = driver.findElement(By.name("lastName]"));
+        WebElement sname = driver.findElement(By.name("lastName"));
         name.sendKeys("Duman");
         sname.sendKeys("LOH");
         WebElement submit = driver.findElement(By.name("css-qu3r7l-BaseStyles"));
@@ -209,6 +217,7 @@ public class Profile {
             requiredSelects.get(i).click();
             WebElement requiredFieldElementsList = requiredSelects.get(i).findElement(By.tagName("ul"));
             wait.until(ExpectedConditions.visibilityOf(requiredFieldElementsList));
+            wait.until(ExpectedConditions.elementToBeClickable(requiredFieldElementsList.findElements(By.className("css-8bnjc8")).get(1)));
             requiredFieldElementsList.findElements(By.className("css-8bnjc8")).get(1).click();
         }
     }
@@ -218,7 +227,6 @@ public class Profile {
 //        wait.until(ExpectedConditions.visibilityOf(confirmationModal));
 //        okBtn.click();
         wait.until(ExpectedConditions.visibilityOf(submitAll));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
         submitAll.click();
     }

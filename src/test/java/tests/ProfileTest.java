@@ -1,53 +1,27 @@
 package tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.Catalog;
-import pages.Home;
-import pages.Profile;
+import common.BaseTest;
 
-import java.time.Duration;
 
-public class ProfileTest {
-
-    WebDriver driver;
-    WebDriverWait wait;
-    Catalog catalog;
-    Home home;
-    Profile profile;
-    private final String url = "https://www.olx.kz/";
-
-    @BeforeTest
-    public void InitDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        driver.manage().window().maximize();
-        home = new Home(driver, wait);
-        profile = new Profile(driver, wait);
-        driver.get(url);
-    }
-
+public class ProfileTest extends BaseTest {
 
     @Test
     public void DeleteFavouritesTest(){
-        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
+        home.writeLogin();
         profile.navigateToFavList();
         profile.deleteFav();
     }
 
     @Test
     public void CreateAdvertisement(){
-        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
+        extentTest = extentReports.createTest("Create advertisement test");
+        home.writeLogin();
         profile.navigateToCreationPage();
-        profile.enterProductName("Продам наушники в отличном состояний");
+        profile.enterProductName("Продам телевизор");
         profile.openCategoryModal();
         profile.chooseSuggestedCategory();
-        profile.enterDescription("Продам наушники в отличном состояний. В комплекте коробка + чехол + наушники + зарядка. Торг уместен");
+        profile.enterDescription("Продам бас гитару в отличном состояний. В комплекте чехол + струны + каподастр + медиатор. Торг уместен");
         profile.enterPrice("10000");
         profile.chooseSeller();
         profile.chooseState();
@@ -58,27 +32,23 @@ public class ProfileTest {
 
     @Test
     public void DeleteAdvertisement(){
-        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
+        home.writeLogin();
         profile.navigateToAds();
         profile.deleteAdvertisement();
         profile.skipStatisticModal();
     }
 
     @Test
-    public void hover(){
-        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
+    public void Logout(){
+        extentTest = extentReports.createTest("Logout test");
+        home.writeLogin();
         profile.hover();
     }
 
     @Test
     public void createCV(){
-        home.writeLogin("dmarlambekov@gmail.com","qABVXr@D-*zn78K");
-        profile.hover();
+        home.writeLogin();
         profile.createCv();
     }
 
-//    @AfterTest
-//    public void TearDown(){
-//        driver.quit();
-//    }
 }

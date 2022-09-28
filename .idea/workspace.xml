@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="home page merge and new test cases">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" afterDir="false" />
+    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="8, 9, 17 test cases">
+      <change afterPath="$PROJECT_DIR$/src/test/java/common/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/common/ConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/common/DriverSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/Screenshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Locators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -46,12 +57,59 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ProfileTest.DeleteAdvertisement">
-    <configuration name="ProfileTest.CreateAdvertisement" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\src\test" />
+      <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\src\main" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.ProfileTest.CreateAdvertisement">
+    <configuration name="CatalogTest.SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
+      <option name="METHOD_NAME" value="SearchTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeTest.RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SOFTWARE_TESTING" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomeTest" />
+      <option name="METHOD_NAME" value="RegistrationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileTest.CreateAdvertisement" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SOFTWARE_TESTING" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,35 +123,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfileTest.DeleteAdvertisement" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.Logout" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
-      <option name="METHOD_NAME" value="DeleteAdvertisement" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileTest.DeleteFavouritesTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
-      <option name="METHOD_NAME" value="DeleteFavouritesTest" />
+      <option name="METHOD_NAME" value="Logout" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -105,7 +145,7 @@
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,31 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfileTest.hover" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
-      <option name="METHOD_NAME" value="hover" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProfileTest.DeleteAdvertisement" />
         <item itemvalue="TestNG.ProfileTest.CreateAdvertisement" />
+        <item itemvalue="TestNG.CatalogTest.SearchTest" />
+        <item itemvalue="TestNG.ProfileTest.Logout" />
         <item itemvalue="TestNG.ProfileTest.createCV" />
-        <item itemvalue="TestNG.ProfileTest.hover" />
-        <item itemvalue="TestNG.ProfileTest.DeleteFavouritesTest" />
+        <item itemvalue="TestNG.HomeTest.RegistrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663903728469</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="8, 9, 17 test cases">
+      <created>1663945643653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663945643653</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +216,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="home page merge and new test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="home page merge and new test cases" />
+    <MESSAGE value="8, 9, 17 test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="8, 9, 17 test cases" />
   </component>
 </project>
