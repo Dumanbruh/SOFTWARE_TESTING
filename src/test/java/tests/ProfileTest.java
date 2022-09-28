@@ -8,6 +8,7 @@ public class ProfileTest extends BaseTest {
 
     @Test
     public void DeleteFavouritesTest(){
+        extentTest = extentReports.createTest("Delete favourites test");
         home.writeLogin();
         profile.navigateToFavList();
         profile.deleteFav();
@@ -32,6 +33,7 @@ public class ProfileTest extends BaseTest {
 
     @Test
     public void DeleteAdvertisement(){
+        extentTest = extentReports.createTest("Delete advertisement test");
         home.writeLogin();
         profile.navigateToAds();
         profile.deleteAdvertisement();

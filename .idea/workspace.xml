@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="8, 9, 17 test cases">
-      <change afterPath="$PROJECT_DIR$/src/test/java/common/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/common/ConfigProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/common/DriverSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/Screenshot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="feature: extent reports and base class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Locators.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,43 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ProfileTest.CreateAdvertisement">
+  <component name="RunManager" selected="TestNG.CatalogTest.appearanceTest">
+    <configuration name="CatalogTest.FavouritesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SOFTWARE_TESTING" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
+      <option name="METHOD_NAME" value="FavouritesTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogTest.FilterTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SOFTWARE_TESTING" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
+      <option name="METHOD_NAME" value="FilterTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CatalogTest.SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
@@ -87,17 +115,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeTest.RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CatalogTest.appearanceTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SOFTWARE_TESTING" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="common.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTest" />
-      <option name="METHOD_NAME" value="RegistrationTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
+      <option name="METHOD_NAME" value="appearanceTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -123,49 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfileTest.Logout" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="common.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
-      <option name="METHOD_NAME" value="Logout" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileTest.createCV" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="common.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
-      <option name="METHOD_NAME" value="createCV" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProfileTest.CreateAdvertisement" />
+        <item itemvalue="TestNG.CatalogTest.appearanceTest" />
+        <item itemvalue="TestNG.CatalogTest.FavouritesTest" />
         <item itemvalue="TestNG.CatalogTest.SearchTest" />
-        <item itemvalue="TestNG.ProfileTest.Logout" />
-        <item itemvalue="TestNG.ProfileTest.createCV" />
-        <item itemvalue="TestNG.HomeTest.RegistrationTest" />
+        <item itemvalue="TestNG.CatalogTest.FilterTest" />
+        <item itemvalue="TestNG.ProfileTest.CreateAdvertisement" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663945643653</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feature: extent reports and base class">
+      <created>1664366498750</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664366498751</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +216,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="home page merge and new test cases" />
     <MESSAGE value="8, 9, 17 test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="8, 9, 17 test cases" />
+    <MESSAGE value="feature: extent reports and base class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: extent reports and base class" />
   </component>
 </project>

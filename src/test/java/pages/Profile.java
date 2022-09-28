@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.Locators;
 
 import java.util.List;
 import java.util.Random;
@@ -32,22 +31,22 @@ public class Profile {
     @FindBy(xpath = "//button[@data-cy='post-new-ad-button']")
     WebElement createAdPageBtn;
 
-    @FindBy(xpath = "//textarea[@data-testid='" + Locators.product_name_id + "']")
+    @FindBy(xpath = "//textarea[@data-testid='posting-title']")
     WebElement productNameInput;
 
-    @FindBy(xpath = "//div[@data-cy='" + Locators.category_button_id +"']")
+    @FindBy(xpath = "//div[@data-cy='posting-select-category']")
     WebElement openCategoryBtn;
 
-    @FindBy(xpath = "//ul[@data-testid='" + Locators.custom_categories_id + "']")
+    @FindBy(xpath = "//ul[@data-testid='categories-list']")
     List<WebElement> customCategories;
 
-    @FindBy(xpath = "//div[@data-cy='" + Locators.suggested_categories_id + "']")
+    @FindBy(xpath = "//div[@data-cy='suggested-categories-list']")
     WebElement suggestedCategories;
 
-    @FindBy(xpath = "//textarea[@data-testid='" + Locators.description_id + "']")
+    @FindBy(xpath = "//textarea[@data-testid='posting-description-text-area']")
     WebElement descriptionInput;
 
-    @FindBy(xpath = "//input[@data-testid='" + Locators.price_input_id +"']")
+    @FindBy(xpath = "//input[@data-testid='price-input']")
     WebElement priceInput;
 
     @FindBy(xpath = "//div[@class='css-iogeva']")
@@ -59,19 +58,19 @@ public class Profile {
     @FindBy(xpath = "//input[@data-cy='location-search-input']")
     WebElement locationField;
 
-    @FindBy(xpath = "//button[@data-cy='" + Locators.submitAll_btn_id + "']")
+    @FindBy(xpath = "//button[@data-cy='purchase-pay-button']")
     WebElement submitAll;
 
     @FindBy(xpath = "//button[@data-testid='submit-btn']")
     WebElement submitCreationBtn;
 
-    @FindBy(xpath = "//button[@aria-label='" + Locators.delete_add_btn_label +"']")
+    @FindBy(xpath = "//button[@aria-label='Деактивировать']")
     List<WebElement> deleteAdBtns;
 
     @FindBy(className = "css-1c2kok2-BaseStyles")
     WebElement skipStatisticBtn;
 
-    @FindBy(xpath = "//div[@data-testid='" + Locators.locations_list_id +"']")
+    @FindBy(xpath = "//div[@data-testid='location-list']")
     WebElement locationsWrapper;
 
     @FindBy(xpath = "//button[text()='Понятно']")

@@ -9,14 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import utils.Locators;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
 
 public class Catalog {
     WebDriver driver;
@@ -30,10 +27,10 @@ public class Catalog {
         this.wait = wait;
     }
 
-    By searchField = By.id(Locators.search_id);
-    By searchBtn = By.name(Locators.search_button_name);
+    By searchField = By.id("search");
+    By searchBtn = By.name("searchBtn");
 
-    @FindBy(xpath = "//input[@data-testid='" + Locators.city_select_test_id + "']")
+    @FindBy(xpath = "//input[@data-testid='location-search-input']")
     WebElement regionSearch;
 
     @FindBy(className = "css-1qvyz1h")
@@ -48,26 +45,30 @@ public class Catalog {
     @FindBy(className = "css-19vlskm")
     WebElement subCategoryWrapper;
 
-    @FindBy(xpath = "//button[@data-testid='" + Locators.catalog_cookies_button + "']")
-    WebElement cookieCloseButton;
 
-    @FindBy(xpath = "//div[@role='"+ Locators.tab_list_role +"']")
+    @FindBy(xpath = "//div[@role='tablist']")
     WebElement tabList;
 
-    @FindBy(xpath = "//div[@data-testid='" + Locators.advertisement_grid_id +"']")
+    @FindBy(xpath = "//div[@data-testid='listing-grid']")
     WebElement advertisementGrid;
 
-    @FindBy(xpath = "//span[@data-testid='" + Locators.add_to_fav_btn_id +"']")
+    @FindBy(xpath = "//span[@data-testid='adAddToFavorites']")
     List<WebElement> favBtn;
 
+    @FindBy(className = "css-1xqxmn3")
+    WebElement recomendationSelect;
+
+    @FindBy(xpath = "//div[@data-testid='flyout-content']")
+    WebElement recomendationList;
+
+    By searchInput = By.id("headerSearch");
+    By searchButton = By.id("submit-searchmain");
 
     //Main page
     @FindBy(xpath = "//div[@class='li fleft']")
     List<WebElement> mainCategories;
 
-    public void closeCookies(){
-        cookieCloseButton.click();
-    }
+
 
     public void navigate(){
         WebElement category = mainCategories.get(rand.nextInt(mainCategories.size()));
@@ -86,7 +87,7 @@ public class Catalog {
     public void enterSearch(String searchData){
         driver.findElement(searchField).sendKeys(searchData);
         //User should be able to see "Clear input" cross.
-        Assert.assertTrue(driver.findElement(By.xpath("//button[@data-testid='" + Locators.clear_search_test_id + "']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//button[@data-testid='clear-btn']")).isDisplayed());
     }
 
     public void writeRegion(String searchData){
@@ -127,26 +128,44 @@ public class Catalog {
     }
 
     public void inputMinSum(Integer minSum){
-        driver.findElement(By.name(Locators.min_sum_input_name)).click();
-        driver.findElement(By.name(Locators.min_sum_input_name)).sendKeys(minSum.toString());
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@data-testid='" + Locators.sum_dropdown + "']")).isDisplayed());
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("range-from-input"))));
+        driver.findElement(By.name("range-from-input")).click();
+        driver.findElement(By.name("range-from-input")).sendKeys(minSum.toString());
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@data-testid='flyout-content']")).isDisplayed());
     }
 
     public void inputMaxSum(Integer maxSum){
-        driver.findElement(By.name(Locators.max_sum_input_name)).click();
-        driver.findElement(By.name(Locators.max_sum_input_name)).sendKeys(maxSum.toString());
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@data-testid='" + Locators.sum_dropdown + "']")).isDisplayed());
-//        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@data-testid='" + Locators.clear_btn_id + "']"))));
-//        wait.until(ExpectedConditions.visibilityOf(tabList));
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("range-to-input"))));
+        driver.findElement(By.name("range-to-input")).click();
+        driver.findElement(By.name("range-to-input")).sendKeys(maxSum.toString());
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@data-testid='flyout-content']")).isDisplayed());
     }
 
 
 
     public void addToFav(){
         favBtn.get(rand.nextInt(favBtn.size())).click();
-//        WebElement favSnackbar = driver.findElement(By.xpath("//div[@data-testid='" + Locators.add_to_fav_snackbar_id + "']"));
-//
-//        Assert.assertTrue(favSnackbar.isDisplayed());
+    }
+
+
+    public void enterSearchMain(String searchData){
+        driver.findElement(searchInput).sendKeys(searchData);
+    }
+    public void clickSearchMain(){
+        driver.findElement(searchButton).click();
+    }
+
+    public void recomendationFilter(){
+        recomendationSelect.click();
+        wait.until(ExpectedConditions.visibilityOf(recomendationList));
+    }
+
+    public void selectAppearance(){
+        List<WebElement> categories = recomendationList.findElements(By.tagName("div"));
+        System.out.println(categories.size());
+        Actions action = new Actions(driver);
+
+        action.moveToElement(categories.get(rand.nextInt(categories.size()))).perform();
     }
 
 

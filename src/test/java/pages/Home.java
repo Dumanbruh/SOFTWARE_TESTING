@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import common.ConfigProperties;
-import utils.Locators;
 
 public class Home {
     WebDriver driver;
@@ -24,35 +23,39 @@ public class Home {
         this.wait = wait;
     }
 
-    By googlePlayBy = By.id(Locators.google_play_button);
-    By appleStoreBy = By.id(Locators.apple_store_button);
-    By cookiesButtonBy = By.className(Locators.cookies_button);
-    By moreButtonBy = By.className(Locators.more_button);
-    By yourProfileButtonBy = By.id(Locators.your_profile_button);
-    By loginInputBy = By.id(Locators.login_input);
-    By passInputBy = By.id(Locators.pass_input);
-    By loginButtonBy = By.id(Locators.login_button);
-    By logoutButtonBy = By.linkText(Locators.logout_button);
-    By forgotPasswordBy = By.className(Locators.forgot_password);
-    By forgotUsernameBy = By.id(Locators.forgot_username);
-    By newPasswordBy = By.id(Locators.new_password);
-    By changePasswordBy = By.id(Locators.change_password);
-    By facebookBy = By.className(Locators.facebook);
-    By facebookUsername = By.id(Locators.facebook_username);
-    By facebookPassword = By.id(Locators.facebook_password);
-    By facebookSubmit = By.id(Locators.facebook_submit);
+    By googlePlayBy = By.id("footerAppAndroid");
+    By appleStoreBy = By.id("footerAppIphone");
+    By cookiesButtonBy = By.className("cookiesBarClose");
+    By moreButtonBy = By.className("footer-business-partner__btn");
+    By yourProfileButtonBy = By.id("topLoginLink");
+    By loginInputBy = By.id("userEmail");
+    By passInputBy = By.id("userPass");
+    By loginButtonBy = By.id("se_userLogin");
+
+    By logoutButtonBy = By.linkText("Выйти");
+    By forgotPasswordBy = By.className("login-form__lostpassword");
+    By forgotUsernameBy = By.id("username");
+    By newPasswordBy = By.id("password");
+    By changePasswordBy = By.id("se_userSignIn");
+    By facebookBy = By.className("login-button--facebook");
+    By facebookUsername = By.id("email");
+    By facebookPassword = By.id("pass");
+    By facebookSubmit = By.id("loginbutton");
 
 
     @FindBy(xpath = "text() = 'Главные рубрики'")
     WebElement MainPageText;
+
+    @FindBy(xpath = "//a[@href='/']")
+    WebElement logo;
 
     public void closeCookie(){
         driver.findElement(cookiesButtonBy).click();
     }
 
     public void navigate(){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("headerLogo"))));
-        driver.findElement(By.id("headerLogo")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(logo));
+        logo.click();
     }
 
     public void clickGooglePlay(){

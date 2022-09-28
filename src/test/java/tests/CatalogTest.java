@@ -34,6 +34,16 @@ public class CatalogTest extends BaseTest {
         catalog.addToFav();
     }
 
+    @Test
+    public void SortingTest(){
+        extentTest = extentReports.createTest("Sorting test");
+        home.closeCookie();
+        catalog.enterSearchMain("iPhone");
+        catalog.clickSearchMain();
+        catalog.recomendationFilter();
+        catalog.selectAppearance();
+    }
+
 
 
 }
