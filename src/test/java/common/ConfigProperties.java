@@ -14,4 +14,12 @@ public interface ConfigProperties extends Config {
     String username();
 
     String password();
+
+    String databaseUrl();
+
+    String databaseUser();
+
+    String databasePassword();
+
+
 }

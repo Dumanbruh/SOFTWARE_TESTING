@@ -9,7 +9,7 @@ public class ProfileTest extends BaseTest {
     @Test
     public void DeleteFavouritesTest(){
         extentTest = extentReports.createTest("Delete favourites test");
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
         profile.navigateToFavList();
         profile.deleteFav();
     }
@@ -17,7 +17,7 @@ public class ProfileTest extends BaseTest {
     @Test
     public void CreateAdvertisement(){
         extentTest = extentReports.createTest("Create advertisement test");
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
         profile.navigateToCreationPage();
         profile.enterProductName("Продам телевизор");
         profile.openCategoryModal();
@@ -34,22 +34,22 @@ public class ProfileTest extends BaseTest {
     @Test
     public void DeleteAdvertisement(){
         extentTest = extentReports.createTest("Delete advertisement test");
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
         profile.navigateToAds();
         profile.deleteAdvertisement();
         profile.skipStatisticModal();
     }
 
     @Test
-    public void Logout(){
+    public void Logout() throws InterruptedException {
         extentTest = extentReports.createTest("Logout test");
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
         profile.hover();
     }
 
     @Test
     public void createCV(){
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
         profile.createCv();
     }
 

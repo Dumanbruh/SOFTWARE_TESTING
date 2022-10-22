@@ -179,11 +179,12 @@ public class Profile {
         WebElement mainMenu = driver.findElement(By.linkText("Ваш профиль"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(mainMenu).perform();
-
-        WebElement subMenu = driver.findElement(By.xpath("//a[contains(text(),'Выйти')]"));
-        actions.moveToElement(subMenu);
-        actions.click().build().perform();
+        actions.moveToElement(mainMenu);
+        actions.pause(1000);
+        actions.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Выйти')]")));
+        actions.pause(1000);
+        actions.click();
+        actions.perform();
     }
 
     public void createCv(){

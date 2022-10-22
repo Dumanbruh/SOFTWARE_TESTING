@@ -4,7 +4,6 @@ import common.BaseTest;
 import org.testng.annotations.Test;
 
 public class CatalogTest extends BaseTest {
-
     @Test
     public void SearchTest(){
         extentTest = extentReports.createTest("Search test");
@@ -28,7 +27,7 @@ public class CatalogTest extends BaseTest {
     @Test
     public void FavouritesTest(){
         extentTest = extentReports.createTest("Add to favourites test test");
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
         home.navigate();
         catalog.navigate();
         catalog.addToFav();

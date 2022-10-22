@@ -2,6 +2,10 @@ package tests;
 
 import common.BaseTest;
 import org.testng.annotations.Test;
+import utils.ExcelUtil;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class HomeTest extends BaseTest {
 
@@ -37,7 +41,7 @@ public class HomeTest extends BaseTest {
     public void RegistrationTest(){
         extentTest = extentReports.createTest("Login test");
         home.closeCookie();
-        home.writeLogin();
+        home.writeLogin(config.username(), config.password());
     }
 
     @Test

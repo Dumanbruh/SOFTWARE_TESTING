@@ -85,6 +85,25 @@ public class Home {
         driver.findElement(facebookPassword).sendKeys("Dias070403");
         driver.findElement(facebookSubmit).click();
     }
+
+    public void writeLogin(String login){
+        wait.until(ExpectedConditions.elementToBeClickable(loginButtonBy));
+        driver.findElement(loginInputBy).sendKeys(login);
+    }
+
+    public void writePassword(String password){
+        wait.until(ExpectedConditions.elementToBeClickable(passInputBy));
+        driver.findElement(passInputBy).sendKeys(password);
+    }
+
+    public void navigateToLoginPage(){
+        driver.findElement(yourProfileButtonBy).click();
+    }
+
+    public void clickLogin(){
+        driver.findElement(loginButtonBy).click();
+    }
+
     //Test Case 4
     public void resetPassword(){
         driver.findElement(cookiesButtonBy).click();
@@ -96,11 +115,12 @@ public class Home {
         driver.findElement(changePasswordBy).click();
     }
     //Test Case 1
-    public void writeLogin(){
-        driver.findElement(cookiesButtonBy).click();
+    public void writeLogin(String login, String password){
         driver.findElement(yourProfileButtonBy).click();
-        driver.findElement(loginInputBy).sendKeys(config.username());
-        driver.findElement(passInputBy).sendKeys(config.password());
+        wait.until(ExpectedConditions.elementToBeClickable(loginButtonBy));
+        driver.findElement(loginInputBy).sendKeys(login);
+        wait.until(ExpectedConditions.elementToBeClickable(passInputBy));
+        driver.findElement(passInputBy).sendKeys(password);
         driver.findElement(loginButtonBy).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[text()='Ваши объявления']")));
     }
