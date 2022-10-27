@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="fix: deleted Locators and fixed sorting test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DBTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/HybridExecuteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/ExcelUtil.java" afterDir="false" />
+    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="fix: test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/runners/CatalogPageRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/CatalogSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/common/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/common/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/common/ConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/common/ConfigProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,16 +46,16 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dmarl/Desktop/Projects/abitur&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dmarl\Desktop\Projects\SQAT\src\test\resources" />
       <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\src\excel" />
       <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\src" />
       <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\.idea" />
       <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\src\test\java" />
-      <recent name="C:\Users\dmarl\Desktop\Projects\SOFTWARE_TESTING\src\test" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -69,104 +63,108 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.DBTest.dbLoginTest">
-    <configuration name="CatalogTest.SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
+  <component name="RunManager" selected="Cucumber Java.Scenario: Filter items in Catalog page">
+    <configuration name="Feature: Catalog (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
+      <option name="GLUE" value="tests.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SQAT" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: Catalog" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CatalogTest" />
-      <option name="METHOD_NAME" value="SearchTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBTest.dbLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
+    <configuration name="Scenario: Add item to favourite (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
+      <option name="GLUE" value="tests.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SQAT" />
+      <option name="NAME_FILTER" value="^Add item to favourite$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add item to favourite$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add item to favourite" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DBTest" />
-      <option name="METHOD_NAME" value="dbLoginTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBTest.dbSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
+    <configuration name="Scenario: Add item to favourite" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/functional/Catalog.feature" />
+      <option name="GLUE" value="tests.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SQAT" />
+      <option name="NAME_FILTER" value="^Add item to favourite$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add item to favourite$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add item to favourite" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DBTest" />
-      <option name="METHOD_NAME" value="dbSearchTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeTest.facebookLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
+    <configuration name="Scenario: Filter items in Catalog page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
+      <option name="GLUE" value="tests.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SQAT" />
+      <option name="NAME_FILTER" value="^Filter items in Catalog page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Filter items in Catalog page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Filter items in Catalog page" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTest" />
-      <option name="METHOD_NAME" value="facebookLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HybridExecuteTest.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SOFTWARE_TESTING" />
+    <configuration name="CatalogPageRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SQAT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HybridExecuteTest" />
-      <option name="METHOD_NAME" value="testLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <option name="PACKAGE_NAME" value="tests.runners" />
+      <option name="MAIN_CLASS_NAME" value="tests.runners.CatalogPageRunner" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DBTest.dbLoginTest" />
-        <item itemvalue="TestNG.DBTest.dbSearchTest" />
-        <item itemvalue="TestNG.CatalogTest.SearchTest" />
-        <item itemvalue="TestNG.HybridExecuteTest.testLogin" />
-        <item itemvalue="TestNG.HomeTest.facebookLogin" />
+        <item itemvalue="Cucumber Java.Scenario: Filter items in Catalog page" />
+        <item itemvalue="JUnit.CatalogPageRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Add item to favourite (1)" />
+        <item itemvalue="Cucumber Java.Feature: Catalog (1)" />
+        <item itemvalue="Cucumber Java.Scenario: Add item to favourite" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664386859035</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: test">
+      <created>1666426679526</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666426679526</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +227,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -234,6 +251,7 @@
     <MESSAGE value="8, 9, 17 test cases" />
     <MESSAGE value="feature: extent reports and base class" />
     <MESSAGE value="fix: deleted Locators and fixed sorting test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: deleted Locators and fixed sorting test" />
+    <MESSAGE value="fix: test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: test" />
   </component>
 </project>

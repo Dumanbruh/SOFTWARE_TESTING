@@ -123,6 +123,10 @@ public class Catalog {
         }
     }
 
+    public void gridIsShown(){
+        advertisementGrid.isDisplayed();
+    }
+
     public void selectSeller(){
         tabList.findElements(By.tagName("button")).get(ThreadLocalRandom.current().nextInt(0, 3)).click();
     }

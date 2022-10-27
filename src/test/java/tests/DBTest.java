@@ -49,8 +49,6 @@ public class DBTest extends BaseTest {
         catalog.enterSearch("Видеокарта");
         catalog.writeRegion("Нур-Султан");
         catalog.clickSearch();
-
-
         String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
         Statement insertStmt = connection.createStatement();
         Thread.sleep(3000);
