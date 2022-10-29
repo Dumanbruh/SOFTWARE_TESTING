@@ -7,3 +7,4 @@ Just a software quality and assurance testing assignent project🛠
   -Testng <br />
   -WebDriverManager by bonigarcia <br />
   -Apache POI <br />
+  -Cucumber
