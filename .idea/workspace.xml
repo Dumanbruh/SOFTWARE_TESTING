@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="fix: test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/runners/CatalogPageRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/CatalogSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" afterDir="false" />
+    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="feature: cucumber testing Catalog page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/CatalogSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dmarl/Desktop/Projects/abitur&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -63,7 +61,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Filter items in Catalog page">
+  <component name="RunManager" selected="JUnit.CatalogPageRunner">
     <configuration name="Feature: Catalog (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
@@ -103,15 +101,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Add item to favourite" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Filter items in Catalog page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/functional/Catalog.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
       <option name="GLUE" value="tests.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="SQAT" />
-      <option name="NAME_FILTER" value="^Add item to favourite$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add item to favourite$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Add item to favourite" />
+      <option name="NAME_FILTER" value="^Filter items in Catalog page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Filter items in Catalog page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Filter items in Catalog page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -123,15 +121,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Filter items in Catalog page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Search item in Catalog page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
       <option name="GLUE" value="tests.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="SQAT" />
-      <option name="NAME_FILTER" value="^Filter items in Catalog page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Filter items in Catalog page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Filter items in Catalog page" />
+      <option name="NAME_FILTER" value="^Search item in Catalog page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Search item in Catalog page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Search item in Catalog page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -160,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Filter items in Catalog page" />
         <item itemvalue="JUnit.CatalogPageRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Search item in Catalog page" />
+        <item itemvalue="Cucumber Java.Scenario: Filter items in Catalog page" />
         <item itemvalue="Cucumber Java.Scenario: Add item to favourite (1)" />
         <item itemvalue="Cucumber Java.Feature: Catalog (1)" />
-        <item itemvalue="Cucumber Java.Scenario: Add item to favourite" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666426679526</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feature: cucumber testing Catalog page">
+      <created>1666880293169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666880293169</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +257,7 @@
     <MESSAGE value="feature: extent reports and base class" />
     <MESSAGE value="fix: deleted Locators and fixed sorting test" />
     <MESSAGE value="fix: test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: test" />
+    <MESSAGE value="feature: cucumber testing Catalog page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: cucumber testing Catalog page" />
   </component>
 </project>

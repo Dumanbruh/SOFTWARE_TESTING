@@ -17,3 +17,12 @@ Feature: Catalog page
     And I choose a category
     And I enter max sum 5000
     And I enter min sum 100
+
+  Scenario: Redirect to Olx for Business page
+    When I click the business button
+
+  Scenario: Get Olx app from Google Play
+    When I click the google play button
+
+  Scenario: Get Olx app from App Store
+    When I click the app store button

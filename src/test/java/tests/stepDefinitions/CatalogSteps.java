@@ -81,6 +81,23 @@ public class CatalogSteps {
         catalog.inputMinSum(int1);
     }
 
+    @When("I click the business button")
+    public void click_business_btn() {
+        home.closeCookie();
+        home.clickMoreButton();
+    }
+
+    @When("I click the google play button")
+    public void click_google_play_btn(){
+        home.closeCookie();
+        home.clickGooglePlay();
+    }
+
+    @When("I click the app store button")
+    public void click_app_store_btn(){
+        home.closeCookie();
+        home.clickAppleStore();
+    }
 
     @After
     public void tearDown(Scenario scenario){
