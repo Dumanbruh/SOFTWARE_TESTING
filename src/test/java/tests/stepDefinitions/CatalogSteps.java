@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Catalog;
 import pages.Home;
@@ -18,13 +19,14 @@ public class CatalogSteps {
     private Catalog catalog;
     private Home home;
     private WebDriver driver;
+    private WebDriverWait wait;
 
     @Before
     public void setUp(Scenario scenario){
         DriverSettings settings = new DriverSettings();
         settings.initDriver();
         driver = DriverSettings.driver;
-        WebDriverWait wait = DriverSettings.wait;
+        wait = DriverSettings.wait;
         catalog = new Catalog(driver, wait);
         home = new Home(driver, wait);
     }
@@ -58,14 +60,9 @@ public class CatalogSteps {
         catalog.writeRegion(string);
     }
 
-    @When("I click on search button")
+    @Then("I click on search button")
     public void i_click_on_search_button(){
         catalog.clickSearch();
-    }
-
-    @Then("Items list should update")
-    public void items_list_should_update() {
-        catalog.gridIsShown();
     }
 
     @Given("I select a category in Catalog page")

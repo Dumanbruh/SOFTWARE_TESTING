@@ -1,11 +1,16 @@
 Feature: Catalog page
+  @AddCatalog
 
-  Scenario: Search item in Catalog page
+  Scenario Outline: Search item in Catalog page
     And I choose a category
-    And I enter item name "Видеокарта"
-    And I enter city name "Нурсултан"
-    When I click on search button
-    Then Items list should update
+    And I enter item name "<itemName>"
+    And I enter city name "<cityName>"
+    Then I click on search button
+    Examples:
+      |itemName|cityName|
+      |Видеокарта|Нур-Султан|
+      |Клавиатура|Шымкент|
+
 
   Scenario: Add item to favourite
     And user is authorized
@@ -13,10 +18,13 @@ Feature: Catalog page
     And I choose a category
     And I add to favourites
 
-  Scenario: Filter items in Catalog page
+  Scenario Outline: Filter items in Catalog page
     And I choose a category
-    And I enter max sum 5000
-    And I enter min sum 100
+    And I enter max sum <maxSum>
+    And I enter min sum <minSum>
+    Examples:
+      |maxSum|minSum|
+      |5000  |100|
 
   Scenario: Redirect to Olx for Business page
     When I click the business button
@@ -26,3 +34,5 @@ Feature: Catalog page
 
   Scenario: Get Olx app from App Store
     When I click the app store button
+
+

@@ -19,7 +19,6 @@ public class ProfileSteps {
 
     private WebDriverWait wait;
     private Home home;
-    private Profile profile;
 
     @Before
     public void setUp(Scenario scenario){
@@ -27,7 +26,6 @@ public class ProfileSteps {
         settings.initDriver();
         driver = DriverSettings.driver;
         wait = DriverSettings.wait;
-        profile = new Profile(driver, wait);
         home = new Home(driver, wait);
     }
 

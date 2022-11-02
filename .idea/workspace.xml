@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="feature: more tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/runners/ProfilePageRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/ProfileSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Profile.feature" afterDir="false" />
+    <list default="true" id="69a279d6-2c99-430b-ae1d-b6665b080632" name="Changes" comment="feature: profile page feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/CatalogSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/ProfileSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/stepDefinitions/ProfileSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Profile.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Profile.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Login to olx.kz">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Search item in Catalog page">
     <configuration name="Scenario: Filter items in Catalog page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Catalog.feature" />
@@ -156,10 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Search item in Catalog page" />
         <item itemvalue="Cucumber Java.Scenario: Login to olx.kz" />
         <item itemvalue="JUnit.ProfilePageRunner" />
         <item itemvalue="JUnit.CatalogPageRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Search item in Catalog page" />
         <item itemvalue="Cucumber Java.Scenario: Filter items in Catalog page" />
       </list>
     </recent_temporary>
@@ -229,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667027441347</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feature: profile page feature">
+      <created>1667028821157</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667028821157</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +272,7 @@
     <MESSAGE value="fix: test" />
     <MESSAGE value="feature: cucumber testing Catalog page" />
     <MESSAGE value="feature: more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: more tests" />
+    <MESSAGE value="feature: profile page feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: profile page feature" />
   </component>
 </project>
